@@ -1,11 +1,12 @@
 //modules
 const request = require('request');
+const config = require('./config.json');
 
-//config(will make a .json file later)
-let category = "Accessories";
-let keyword = "Tagless";
-let size = "Small";
-let color = "White";
+//config
+let category = config['tasks'][0]['category'];
+let keyword = config['tasks'][0]['keyword'];
+let color = config['tasks'][0]['color'];
+let size = config['tasks'][0]['size'];
 
 //session for cookies
 const session = request.defaults({jar:true});
